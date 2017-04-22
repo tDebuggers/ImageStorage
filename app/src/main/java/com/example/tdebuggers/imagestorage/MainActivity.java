@@ -34,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imageView;
     private EditText txtImageName;
     private EditText price;
+    private EditText status;
+    private EditText description;
+    private EditText NamePhon;
     private Uri imgUri;
 
 
@@ -51,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
         imageView = (ImageView) findViewById(R.id.imageView);
         txtImageName = (EditText) findViewById(R.id.txtImageName);
         price = (EditText) findViewById(R.id.price);
+        status = (EditText) findViewById(R.id.status);
+        description = (EditText) findViewById(R.id.description);
+        NamePhon = (EditText) findViewById(R.id.NamePhon);
 
     }
 
@@ -106,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                     dialog.dismiss();
                     //Display success toast msg
                     Toast.makeText(getApplicationContext(), "Image uploaded", Toast.LENGTH_SHORT).show();
-                    ImageUpload imageUpload = new ImageUpload(txtImageName.getText().toString(), taskSnapshot.getDownloadUrl().toString(), price.getText().toString());
+                    ImageUpload imageUpload = new ImageUpload(txtImageName.getText().toString(), taskSnapshot.getDownloadUrl().toString(), price.getText().toString(), status.getText().toString(), description.getText().toString(), NamePhon.getText().toString());
 
                     //Save image info in to firebase database
                     String uploadId = mDatabaseRef.push().getKey();

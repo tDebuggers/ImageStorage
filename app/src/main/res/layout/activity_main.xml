@@ -10,12 +10,12 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Browse image to upload"
+        android:text="Browse"
         android:onClick="btnBrowse_Click"/>
 
     <ImageView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_gravity="center"
         android:id="@+id/imageView"/>
     <EditText
@@ -28,6 +28,21 @@
         android:layout_height="wrap_content"
         android:id="@+id/price"
         android:hint="Price"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/status"
+        android:hint="Using Status"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/description"
+        android:hint="Description"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/NamePhon"
+        android:hint="Your Name and Phone"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -17,6 +17,10 @@ import java.util.List;
 
 import static com.example.tdebuggers.imagestorage.R.id.tvImageName;
 import static com.example.tdebuggers.imagestorage.R.id.tvPrice;
+import static com.example.tdebuggers.imagestorage.R.id.tvStatus;
+import static com.example.tdebuggers.imagestorage.R.id.tvDescription;
+import static com.example.tdebuggers.imagestorage.R.id.tvNamePhon;
+
 
 
 public class ImageListAdapter extends ArrayAdapter<ImageUpload> {
@@ -39,12 +43,24 @@ public class ImageListAdapter extends ArrayAdapter<ImageUpload> {
         View v = inflater.inflate(resource, null);
         TextView tvName = (TextView) v.findViewById(tvImageName);
         TextView tvPrices = (TextView) v.findViewById(tvPrice);
+        TextView tvstatus = (TextView) v.findViewById(tvStatus);
+        TextView tvdescription = (TextView) v.findViewById(tvDescription);
+        TextView tvnamephon = (TextView) v.findViewById(tvNamePhon);
         ImageView img = (ImageView) v.findViewById(R.id.imgView);
 
-        tvName.setText(listImage.get(position).getName());
+        tvName.setText("Product Name : "+listImage.get(position).getName());
         Glide.with(context).load(listImage.get(position).getUrl()).into(img);
 
-        tvPrices.setText(listImage.get(position).getPrice());
+        tvPrices.setText("Price : "+listImage.get(position).getPrice());
+        Glide.with(context).load(listImage.get(position).getUrl()).into(img);
+
+        tvstatus.setText("Using Status : "+listImage.get(position).getStatus());
+        Glide.with(context).load(listImage.get(position).getUrl()).into(img);
+
+        tvdescription.setText("Description : "+listImage.get(position).getDescription());
+        Glide.with(context).load(listImage.get(position).getUrl()).into(img);
+
+        tvnamephon.setText("Name & Phone : "+listImage.get(position).getNamephon());
         Glide.with(context).load(listImage.get(position).getUrl()).into(img);
 
         return v;
